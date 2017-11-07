@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<London>
+  <name>London</name>
+  <population>8787892</population>
+  <country>United Kingdom</country>
+</London>
+<Manchester>
+  <name>Manchester</name>
+  <population>541300</population>
+  <country>United Kingdom</country>
+</Manchester>
+<Birmingham>
+  <name>Birmingham</name>
+  <population>1124600</population>
+  <country>United Kingdom</country>
+</Birmingham>
+<Leeds>
+  <name>Leeds</name>
+  <population>781700</population>
+  <country>United Kingdom</country>
+</Leeds>
+<Kiev>
+  <name>Kiev</name>
+  <population>2900920</population>
+  <country>Ukraine</country>
+</Kiev>
+<Odessa>
+  <name>Odessa</name>
+  <population>1016515</population>
+  <country>Ukraine</country>
+</Odessa>
+<Simferopol>
+  <name>Simferopol</name>
+  <population>332317</population>
+  <country>Ukraine</country>
+</Simferopol>
+<Paris>
+  <name>Paris</name>
+  <population>2229621</population>
+  <country>France</country>
+</Paris>
+<Marsel>
+  <name>Marseille</name>
+  <population>855393</population>
+  <country>France</country>
+</Marsel>
+<Madrid>
+  <name>Madrid</name>
+  <population>3141991</population>
+  <country>Spain</country>
+</Madrid>
+<Barcelona>
+  <name>Barcelona</name>
+  <population>1604555</population>
+  <country>Spain</country>
+</Barcelona>
+<Sevilla>
+  <name>Seville</name>
+  <population>703021</population>
+  <country>Spain</country>
+</Sevilla>
+<Beijing>
+  <name>Beijing</name>
+  <population>21516000</population>
+  <country>China</country>
+</Beijing>
+<Rome>
+  <name>Rome</name>
+  <population>2876076</population>
+  <country>Italy</country>
+</Rome>
+<Milan>
+  <name>Milan</name>
+  <population>3219000</population>
+  <country>Italy</country>
+</Milan>
+<Neapol>
+  <name>Naples</name>
+  <population>975260</population>
+  <country>Italy</country>
+</Neapol>
+<Genoa>
+  <name>Genoa</name>
+  <population>594733</population>
+  <country>Italy</country>
+</Genoa>
+<Cairo>
+  <name>Cairo</name>
+  <population>9278441</population>
+  <country>Egypt</country>
+</Cairo>
+<Abuja>
+  <name>Abuja</name>
+  <population>1235880</population>
+  <country>Nigeria</country>
+</Abuja>
+<Brasília>
+  <name>Brasília</name>
+  <population>214529</population>
+  <country>Brazil</country>
+</Brasília>
+<BuenosAires>
+  <name>Buenos Aires</name>
+  <population>2890151</population>
+  <country>Argentina</country>
+</BuenosAires>
+<Santiago>
+  <name>Santiago</name>
+  <population>7314176</population>
+  <country>Chile</country>
+</Santiago>
+<Montevideo>
+  <name>Montevideo</name>
+  <population>1305082</population>
+  <country>Uruguay</country>
+</Montevideo>
+<Tashkent>
+  <name>Tashkent</name>
+  <population>2309600</population>
+  <country>Uzbekistan</country>
+</Tashkent>
+<Tokyo>
+  <name>Tokyo</name>
+  <population>12513734</population>
+  <country>Japan</country>
+</Tokyo>
+<Riyadh>
+  <name>Riyadh</name>
+  <population>6506700</population>
+  <country>Saudi Arabia</country>
+</Riyadh>
+<Copenhagen>
+  <name>Copenhagen</name>
+  <population>606057</population>
+  <country>Denmark</country>
+</Copenhagen>
+<Vienna>
+  <name>Vienna</name>
+  <population>1867960</population>
+  <country>Austria</country>
+</Vienna>
+<Warsaw>
+  <name>Warsaw</name>
+  <population>1753977</population>
+  <country>Poland</country>
+</Warsaw>
+<Riga>
+  <name>Riga</name>
+  <population>641423</population>
+  <country>Latvia</country>
+</Riga>
+

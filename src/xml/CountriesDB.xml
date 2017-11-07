@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EGY>
+  <name>Egypt</name>
+  <gov>Semi-presidential republic</gov>
+  <curr>EGP</curr>
+  <question>Cairo</question>
+  <telcode>20</telcode>
+  <map>Africa</map>
+  <population>95623427</population>
+  <square>1 001 450</square>
+</EGY>
+<NGA>
+  <name>Nigeria</name>
+  <gov>Presidential republic</gov>
+  <curr>NGN</curr>
+  <question>Abuja</question>
+  <telcode>234</telcode>
+  <map>Africa</map>
+  <population>192193402</population>
+  <square>923 768</square>
+</NGA>
+<BRA>
+  <name>Brazil</name>
+  <gov>Presidential republic</gov>
+  <curr>BRL</curr>
+  <question>Brasília</question>
+  <telcode>55</telcode>
+  <map>South America</map>
+  <population>208174800</population>
+  <square>8 514 877</square>
+</BRA>
+<ARG>
+  <name>Argentina</name>
+  <gov>Presidential republic</gov>
+  <curr>ARS</curr>
+  <question>Buenos Aires</question>
+  <telcode>54</telcode>
+  <map>South America</map>
+  <population>43131966</population>
+  <square>2 780 400</square>
+</ARG>
+<CHL>
+  <name>Chile</name>
+  <gov>Presidential republic</gov>
+  <curr>CLP</curr>
+  <question>Santiago</question>
+  <telcode>56</telcode>
+  <map>South America</map>
+  <population>18006407</population>
+  <square>756 950</square>
+</CHL>
+<URY>
+  <name>Uruguay</name>
+  <gov>Presidential republic</gov>
+  <curr>UYU</curr>
+  <question>Montevideo</question>
+  <telcode>598</telcode>
+  <map>South America</map>
+  <population>3415866</population>
+  <square>176 220</square>
+</URY>
+<CHN>
+  <name>China</name>
+  <gov>One-party republic</gov>
+  <curr>CNY</curr>
+  <question>Beijing</question>
+  <telcode>86</telcode>
+  <map>Asia</map>
+  <population>1386192000</population>
+  <square>9 598 962</square>
+</CHN>
+<UZB>
+  <name>Uzbekistan</name>
+  <gov>Presidential republic</gov>
+  <curr>UZS</curr>
+  <question>Tashkent</question>
+  <telcode>998</telcode>
+  <map>Asia</map>
+  <population>32121100</population>
+  <square>447 400</square>
+</UZB>
+<JPN>
+  <name>Japan</name>
+  <gov>Constitutional monarchy</gov>
+  <curr>JPY</curr>
+  <question>Tokyo</question>
+  <telcode>81</telcode>
+  <map>Asia</map>
+  <population>126740000</population>
+  <square>377 835</square>
+</JPN>
+<SAU>
+  <name>Saudi Arabia</name>
+  <gov>Absolute monarchy</gov>
+  <curr>SAR</curr>
+  <question>Riyadh</question>
+  <telcode>966</telcode>
+  <map>Asia</map>
+  <population>32248200</population>
+  <square>2 149 690</square>
+</SAU>
+<GBR>
+  <name>United Kingdom</name>
+  <gov>Constitutional monarchy</gov>
+  <curr>GBP</curr>
+  <question>London</question>
+  <telcode>44</telcode>
+  <map>Europe</map>
+  <population>65808573</population>
+  <square>244 820</square>
+</GBR>
+<FRA>
+  <name>France</name>
+  <gov>Premier-presidential republic</gov>
+  <curr>EUR</curr>
+  <question>Paris</question>
+  <telcode>33</telcode>
+  <map>Europe</map>
+  <population>64859599</population>
+  <square>547 030</square>
+</FRA>
+<ESP>
+  <name>Spain</name>
+  <gov>Constitutional monarchy</gov>
+  <curr>EUR</curr>
+  <question>Madrid</question>
+  <telcode>34</telcode>
+  <map>Europe</map>
+  <population>46528966</population>
+  <square>504 782</square>
+</ESP>
+<ITA>
+  <name>Italy</name>
+  <gov>Parliamentary republic</gov>
+  <curr>EUR</curr>
+  <question>Rome</question>
+  <telcode>39</telcode>
+  <map>Europe</map>
+  <population>60589445</population>
+  <square>301 340</square>
+</ITA>
+<DNK>
+  <name>Denmark</name>
+  <gov>Constitutional monarchy</gov>
+  <curr>DKK</curr>
+  <question>Copenhagen</question>
+  <telcode>45</telcode>
+  <map>Europe</map>
+  <population>5668743</population>
+  <square>43 094</square>
+</DNK>
+<AUT>
+  <name>Austria</name>
+  <gov>Parliamentary republic</gov>
+  <curr>EUR</curr>
+  <question>Vienna</question>
+  <telcode>43</telcode>
+  <map>Europe</map>
+  <population>8773686</population>
+  <square>83 858</square>
+</AUT>
+<POL>
+  <name>Poland</name>
+  <gov>Premier-presidential republic</gov>
+  <curr>EUR</curr>
+  <question>Warsaw</question>
+  <telcode>48</telcode>
+  <map>Europe</map>
+  <population>38424000</population>
+  <square>312 685</square>
+</POL>
+<LVA>
+  <name>Latvia</name>
+  <gov>Parliamentary republic</gov>
+  <curr>EUR</curr>
+  <question>Riga</question>
+  <telcode>371</telcode>
+  <map>Europe</map>
+  <population>1934500</population>
+  <square>64 589</square>
+</LVA>
+<UKR>
+  <name>Ukraine</name>
+  <gov>Premier-presidential republic</gov>
+  <curr>UAH</curr>
+  <question>Kyiv</question>
+  <telcode>380</telcode>
+  <map>Europe</map>
+  <population>42353130</population>
+  <square>603 549</square>
+</UKR>

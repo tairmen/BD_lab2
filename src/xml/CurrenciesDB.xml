@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EGP>
+  <name>Egyptian pound</name>
+  <symb>£</symb>
+  <togrn>1.51</togrn>
+</EGP>
+<NGN>
+  <name>Nigerian naira</name>
+  <symb>₦</symb>
+  <togrn>0.07</togrn>
+</NGN>
+<BRL>
+  <name>Brazilian real</name>
+  <symb>R$</symb>
+  <togrn>8.33</togrn>
+</BRL>
+<ARS>
+  <name>Argentine peso</name>
+  <symb>$</symb>
+  <togrn>1.52</togrn>
+</ARS>
+<CLP>
+  <name>Chilean peso</name>
+  <symb>$</symb>
+  <togrn>0.04</togrn>
+</CLP>
+<UYU>
+  <name>Uruguayan peso</name>
+  <symb>$</symb>
+  <togrn>0.91</togrn>
+</UYU>
+<CNY>
+  <name>Chinese yuan</name>
+  <symb>¥</symb>
+  <togrn>4.04</togrn>
+</CNY>
+<UZS>
+  <name>Uzbekistani som</name>
+  <symb></symb>
+  <togrn>0.003</togrn>
+</UZS>
+<JPY>
+  <name>Japanese yen</name>
+  <symb>¥</symb>
+  <togrn>0.23</togrn>
+</JPY>
+<SAR>
+  <name>Saudi riyal</name>
+  <symb>ر.س</symb>
+  <togrn>7.08</togrn>
+</SAR>
+<GBP>
+  <name>British pound</name>
+  <symb>£</symb>
+  <togrn>35.42</togrn>
+</GBP>
+<DKK>
+  <name>Danish krone</name>
+  <symb>kr</symb>
+  <togrn>4.23</togrn>
+</DKK>
+<UAH>
+  <name>Ukrainian hryvnia</name>
+  <symb>₴</symb>
+  <togrn>1</togrn>
+</UAH>
+<EUR>
+  <name>Euro</name>
+  <symb>€</symb>
+  <togrn>31.52</togrn>
+</EUR>

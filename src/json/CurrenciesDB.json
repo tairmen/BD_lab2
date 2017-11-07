@@ -1,0 +1,72 @@
+﻿{
+  "EGP": {
+    "name": "Egyptian pound",
+    "symb": "£",
+    "togrn": 1.51
+  },
+  "NGN": {
+    "name": "Nigerian naira",
+    "symb": "₦",
+    "togrn": 0.07
+  },
+  "BRL": {
+    "name": "Brazilian real",
+    "symb": "R$",
+    "togrn": 8.33
+  },
+  "ARS": {
+    "name": "Argentine peso",
+    "symb": "$",
+    "togrn": 1.52
+  },
+  "CLP": {
+    "name": "Chilean peso",
+    "symb": "$",
+    "togrn": 0.04
+  },
+  "UYU": {
+    "name": "Uruguayan peso",
+    "symb": "$",
+    "togrn": 0.91
+  },
+  "CNY": {
+    "name": "Chinese yuan",
+    "symb": "¥",
+    "togrn": 4.04
+  },
+  "UZS": {
+    "name": "Uzbekistani som",
+    "symb": "",
+    "togrn": 0.003
+  },
+  "JPY": {
+    "name": "Japanese yen",
+    "symb": "¥",
+    "togrn": 0.23
+  },
+  "SAR": {
+    "name": "Saudi riyal",
+    "symb": "ر.س",
+    "togrn": 7.08
+  },
+  "GBP": {
+    "name": "British pound",
+    "symb": "£",
+    "togrn": 35.42
+  },
+  "DKK": {
+    "name": "Danish krone",
+    "symb": "kr",
+    "togrn": 4.23
+  },
+  "UAH": {
+    "name": "Ukrainian hryvnia",
+    "symb": "₴",
+    "togrn": 1
+  },
+  "EUR": {
+    "name": "Euro",
+    "symb": "€",
+    "togrn": 31.52
+  }
+}

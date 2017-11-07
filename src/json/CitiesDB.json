@@ -1,0 +1,152 @@
+﻿{
+  "London": {
+    "name": "London",
+    "population": 8787892,
+    "country": "United Kingdom"
+  },
+  "Manchester": {
+    "name": "Manchester",
+    "population": 541300,
+    "country": "United Kingdom"
+  },
+  "Birmingham": {
+    "name": "Birmingham",
+    "population": 1124600,
+    "country": "United Kingdom"
+  },
+  "Leeds": {
+    "name": "Leeds",
+    "population": 781700,
+    "country": "United Kingdom"
+  },
+  "Kiev": {
+    "name": "Kiev",
+    "population": 2900920,
+    "country": "Ukraine"
+  },
+  "Odessa": {
+    "name": "Odessa",
+    "population": 1016515,
+    "country": "Ukraine"
+  },
+  "Simferopol": {
+    "name": "Simferopol",
+    "population": 332317,
+    "country": "Ukraine"
+  },
+  "Paris": {
+    "name": "Paris",
+    "population": 2229621,
+    "country": "France"
+  },
+  "Marsel": {
+    "name": "Marseille",
+    "population": 855393,
+    "country": "France"
+  },
+  "Madrid": {
+    "name": "Madrid",
+    "population": 3141991,
+    "country": "Spain"
+  },
+  "Barcelona": {
+    "name": "Barcelona",
+    "population": 1604555,
+    "country": "Spain"
+  },
+  "Sevilla": {
+    "name": "Seville",
+    "population": 703021,
+    "country": "Spain"
+  },
+  "Beijing": {
+    "name": "Beijing",
+    "population": 21516000,
+    "country": "China"
+  },
+  "Rome": {
+    "name": "Rome",
+    "population": 2876076,
+    "country": "Italy"
+  },
+  "Milan": {
+    "name": "Milan",
+    "population": 3219000,
+    "country": "Italy"
+  },
+  "Neapol": {
+    "name": "Naples",
+    "population": 975260,
+    "country": "Italy"
+  },
+  "Genoa": {
+    "name": "Genoa",
+    "population": 594733,
+    "country": "Italy"
+  },
+  "Cairo": {
+    "name": "Cairo",
+    "population": 9278441,
+    "country": "Egypt"
+  },
+  "Abuja": {
+    "name": "Abuja",
+    "population": 1235880,
+    "country": "Nigeria"
+  },
+  "Brasília": {
+    "name": "Brasília",
+    "population": 214529,
+    "country": "Brazil"
+  },
+  "BuenosAires": {
+    "name": "Buenos Aires",
+    "population": 2890151,
+    "country": "Argentina"
+  },
+  "Santiago": {
+    "name": "Santiago",
+    "population": 7314176,
+    "country": "Chile"
+  },
+  "Montevideo": {
+    "name": "Montevideo",
+    "population": 1305082,
+    "country": "Uruguay"
+  },
+  "Tashkent": {
+    "name": "Tashkent",
+    "population": 2309600,
+    "country": "Uzbekistan"
+  },
+  "Tokyo": {
+    "name": "Tokyo",
+    "population": 12513734,
+    "country": "Japan"
+  },
+  "Riyadh": {
+    "name": "Riyadh",
+    "population": 6506700,
+    "country": "Saudi Arabia"
+  },
+  "Copenhagen": {
+    "name": "Copenhagen",
+    "population": 606057,
+    "country": "Denmark"
+  },
+  "Vienna": {
+    "name": "Vienna",
+    "population": 1867960,
+    "country": "Austria"
+  },
+  "Warsaw": {
+    "name": "Warsaw",
+    "population": 1753977,
+    "country": "Poland"
+  },
+  "Riga": {
+    "name": "Riga",
+    "population": 641423,
+    "country": "Latvia"
+  }
+}

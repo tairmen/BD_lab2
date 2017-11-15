@@ -4,3 +4,8 @@ this project written on javascript using node.js
 
 
 для роботи програми треба інсталювати node.js
+
+
+
+
+author: Abduraimov Tair Kv-52

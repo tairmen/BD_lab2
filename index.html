@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our World</title>
+</head>
+<body>
+
+<h3>My travels</h3>	
+	<div id="travels"></div>
+	<div id="changebattons"></div>
+	<div id="delbattons"></div>
+	<div id="changefield"></div>
+	<div id="searchfield"></div>
+	<div id="searchtable"></div>
+	<div id="searchfieldcity"></div>
+	<div id="searchfieldcountry"></div>
+	<div id="searchfieldcurrs"></div>
+	<script src="jquery-3.2.1.min.js"></script>
+	<script src="tojsobj.js"></script>
+	<div>
+		<script>
+			var PerContinent = getPerContinent();
+			var cities = getCities();
+			var countries = getCountries();
+			var currencies = getCurrencies();
+			var Objtravels = getTravels();
+			var travels = [];
+			var cnt = 0;
+			for (property in Objtravels) {
+				travels.push(Objtravels[property]);
+			}
+			function showTravels(travels) {
+				var table = { html: "<table id='travelstable' border='1' width = '500' align='left'>" };
+				table.html += "<tr><td><font face = 'cursive'>city</font></td><td><font face = 'cursive'>departure date</font></td><td><font face = 'cursive'>date of arrival</font></td></tr>";
+				for (property in travels) {
+					table.html += "<tr><td>" + travels[property].city + "</td><td>" + travels[property].dep_date + "</td><td>" + travels[property].arriv_date + "</td></tr>";
+				}
+				document.getElementById("travels").innerHTML = table.html;
+			}
+			function showBattons(travels) {
+				var battons = "";
+				var x = 5;
+				for (property in travels) {
+					battons += '<input style="margin-top:' + x + 'px" type="button" id="Tr' + property + '" value="Change" onclick = "changeTravel(' + property + ')" />';
+					battons += '<input style="margin-top:' + x + 'px" type="button" id="DTr' + property + '" value="Delete" onclick = "delTravel(' + property + ')" /><br />';
+				}
+				document.getElementById("changebattons").style.margin = '45px';
+				document.getElementById("changebattons").innerHTML = battons;
+			}
+			function changeTravel(id) {
+				document.getElementById("changefield").innerHTML = "<text>New departure date</text><text style = 'padding-left: 30px'>New date of arrival</text><br />";
+				var changestr = '<input type="date" onchange="changedepdate(' + id + ',this.value)"><input type="date" onchange="changearrivdate(' + id + ',this.value)"><input type="button" value="OK" onclick="nochangefield()">';
+				document.getElementById("changefield").innerHTML += changestr;
+			}
+			function delTravel(id) {
+				delete travels[id];
+				showTravels(travels);
+				showBattons(travels);
+			}
+			function changedepdate(id, dtext) {
+				id = parseInt(id, 10);
+				travels[id].dep_date = dtext;
+				showTravels(travels);
+			}
+			function changearrivdate(id, atext) {
+				id = parseInt(id, 10);
+				travels[id].arriv_date = atext;
+				showTravels(travels);
+			}
+			function nochangefield() {
+				document.getElementById("changefield").innerHTML = "";
+			}
+			function searchfld() {
+				var field = '<input type="text" onchange="searchAll(this.value)"/><input type="button" value="Search"/>';
+				document.getElementById("searchfield").innerHTML = field;
+			}
+			function searchAll(something) {
+				cnt++;
+				if (cnt > 1) {
+					document.getElementById("searchtable").innerHTML = "";
+					cnt = 1;
+				}
+				var p = 1;
+				for (property in cities) {
+					if (cities[property].name == something) {
+						var table1 = "<table border='1' width = '400'>"
+						table1 += "<tr><td><font face = 'cursive'>city</font></td><td><font face = 'cursive'>country</font></td><td><font face = 'cursive'>population</font></td></tr>";
+						table1 += "<tr><td>" + something + "</td><td>" + cities[property].country + "</td><td>" + cities[property].population + "</td></tr>";
+						p = 2;
+						document.getElementById("searchtable").innerHTML += table1;
+					}
+				}
+				for (property in currencies) {
+					if ((currencies[property].name == something) || (property == something) || (currencies[property].symb == something)) {
+						var table1 = "<table border='1' width = '500'>"
+						table1 += "<tr><td><font face = 'cursive'>currency</font></td><td><font face = 'cursive'>full name</font></td><td><font face = 'cursive'>symbol</font></td><td><font face = 'cursive'>actual exchange to grn</font></td></tr>";
+						table1 += "<tr><td>" + property + "</td><td>" + currencies[property].name + "</td><td>" + currencies[property].symb + "</td><td>" + currencies[property].togrn + "</td></tr>";
+						p = 2;
+						document.getElementById("searchtable").innerHTML += table1;
+					}
+				}
+				for (property in countries) {
+					if ((countries[property].name == something) || (countries[property].telcode == something)) {
+						var table1 = "<table border='1' width = '800'>"
+						table1 += "<tr><td><font face = 'cursive'>country</td><td><font face = 'cursive'>capital</td><td><font face = 'cursive'>population</td><td><font face = 'cursive'>square</td><td><font face = 'cursive'>currency</td><td><font face = 'cursive'>government</td><td><font face = 'cursive'>tel code</td></tr>";
+						table1 += "<tr><td>" + countries[property].name + "</td><td>" + countries[property].question + "</td><td>" + countries[property].population + "</td><td>" + countries[property].square + "</td><td>" + countries[property].curr + "</td><td>" + countries[property].gov + "</td><td>" + countries[property].telcode + "</td></tr>";
+						p = 2;
+						document.getElementById("searchtable").innerHTML += table1;
+					}
+				}
+				if (p == 1) {
+					document.getElementById("searchtable").innerHTML += "<br />'" + something + "' NOT FOUND";
+				}
+			}
+			function searchfld1() {
+				var field = '<input type="text" onchange="searchCityInfo(this.value)"/><input type="button" value="Search city" />';
+				document.getElementById("searchfieldcity").innerHTML = field;
+			}
+			function searchfld2() {
+				var field = '<input type="text" onchange="searchCountryInfo(this.value)"/><input type="button" value="Search country" />';
+				document.getElementById("searchfieldcountry").innerHTML = field;
+			}
+			function searchfld3() {
+				var field = '<input type="text" onchange="searchCurrInfo(this.value)"/><input type="button" value="Search cuurency" />';
+				document.getElementById("searchfieldcurrs").innerHTML = field;
+			}
+			function searchCityInfo(city) {
+				var p = 1;
+				for (property in cities) {
+					if (cities[property].name == city) {
+						var table1 = "<table border='1' width = '400'>"
+						table1 += "<tr><td><font face = 'cursive'>city</font></td><td><font face = 'cursive'>country</font></td><td><font face = 'cursive'>population</font></td></tr>";
+						table1 += "<tr><td>" + city + "</td><td>" + cities[property].country + "</td><td>" + cities[property].population + "</td></tr>";
+						p = 2;
+						document.getElementById("searchfieldcity").innerHTML += table1;
+					}
+				}		
+				if (p == 1) {
+					document.getElementById("searchfieldcity").innerHTML += "<br />NO THIS CITY IN DATABASE";
+				}
+			}
+			function searchCountryInfo(country) {
+				var p = 1;
+				for (property in countries) {
+					if (countries[property].name == country) {
+						var table1 = "<table border='1' width = '800'>"
+						table1 += "<tr><td><font face = 'cursive'>country</td><td><font face = 'cursive'>capital</td><td><font face = 'cursive'>population</td><td><font face = 'cursive'>square</td><td><font face = 'cursive'>currency</td><td><font face = 'cursive'>government</td><td><font face = 'cursive'>tel code</td></tr>";
+						table1 += "<tr><td>" + countries[property].name + "</td><td>" + countries[property].question + "</td><td>" + countries[property].population + "</td><td>" + countries[property].square + "</td><td>" + countries[property].curr + "</td><td>" + countries[property].gov + "</td><td>" + countries[property].telcode + "</td></tr>";
+						p = 2;
+						document.getElementById("searchfieldcountry").innerHTML += table1;
+					}
+				}
+				if (p == 1) {
+					document.getElementById("searchfieldcountry").innerHTML += "<br />NO THIS COUNTRY IN DATABASE";
+				}
+			}
+			function searchCurrInfo(curr) {
+				var p = 1;
+				for (property in currencies) {
+					if ((currencies[property].name == curr) || (property == curr) || (currencies[property].symb == curr)) {
+						var table1 = "<table border='1' width = '500'>"
+						table1 += "<tr><td><font face = 'cursive'>currency</font></td><td><font face = 'cursive'>full name</font></td><td><font face = 'cursive'>symbol</font></td><td><font face = 'cursive'>actual exchange to grn</font></td></tr>";
+						table1 += "<tr><td>" + property + "</td><td>" + currencies[property].name + "</td><td>" + currencies[property].symb + "</td><td>" + currencies[property].togrn + "</td></tr>";
+						p = 2;
+						document.getElementById("searchfieldcurrs").innerHTML += table1;
+					}
+				}
+				if (p == 1) {
+					document.getElementById("searchfieldcurrs").innerHTML += "<br />NO THIS CITY IN DATABASE";
+				}
+			}
+			$(document).ready(function () {
+				showTravels(travels);
+				showBattons(travels);
+				searchfld();
+				//searchfld1();
+				//searchfld2();
+				//searchfld3();
+				//helpme();
+			});
+		</script>
+	</div>
+<br />
+<br />
+<h3> New travel</h3>
+Select a continent. The countries of the selected continent will be shown in a table.
+<br />
+
+<select id='dropDownMenu'>
+    <option value=''>Select a Continent</option>
+</select>
+
+<br />
+<br />
+
+<div id="countries"></div>
+<div id="cities"></div>
+<div id="currencies"></div>
+<div id="addtravelbatts"></div>
+<div id="addfield"></div>
+	<div>
+		<script>
+
+		var dropDownMenu = document.getElementById("dropDownMenu");
+		//var dropDownCountries = document.getElementById("dropDownCountries");
+		for (property in PerContinent) {
+			var option = document.createElement("option");
+			option.value = property;
+			option.text = PerContinent[property].text;
+			dropDownMenu.add(option);
+		}
+		function showCountries(continent) {
+			if (continent != "") {
+				var table = { html: "<table id='countriesTable' border='1' width = '1200'>" };
+				table.html += "<tr><td><font face = 'cursive'>country</td><td><font face = 'cursive'>capital</td><td><font face = 'cursive'>population</td><td><font face = 'cursive'>square</td><td><font face = 'cursive'>currency</td><td><font face = 'cursive'>government</td><td><font face = 'cursive'>tel code</td></tr>";
+				for (property in countries) {
+					if (countries[property].map == PerContinent[continent].text) {
+						addCountryToTable(countries[property].name, countries[property].question, countries[property].population, countries[property].square, countries[property].curr, countries[property].gov, countries[property].telcode, table);
+					}
+				}
+				table.html += "</table>";
+				document.getElementById("countries").innerHTML = table.html;
+				document.getElementById("countries").innerHTML += "<br />Select a country. The cities will be shown in first table. Actual currency exchange will be shown in second table.<br /><select id='dropDownCountries'><option value=''>Select a Country</option></select>";
+				var dropDownCountries = document.getElementById("dropDownCountries");
+				for (property in countries) {
+					if (countries[property].map == PerContinent[continent].text) {
+						var option = document.createElement("option");
+						option.value = property;
+						option.text = countries[property].name;
+						dropDownCountries.add(option);
+					}
+				}
+				$("#dropDownCountries").change(function () {
+					showCurrencies($("#dropDownCountries").find(":selected").attr("value"));
+					showCities($("#dropDownCountries").find(":selected").attr("value"));
+					showAddBattons($("#dropDownCountries").find(":selected").attr("value"));
+				});
+			}
+			else {
+				document.getElementById("countries").innerHTML = "";
+			}
+		}
+		function addCountryToTable(country, capital, population, square, curr, gov, telcode, table) {
+			table.html += "<tr><td>" + country + "</td>" + "<td>" + capital + "</td>" + "<td>" + population + "</td>" + "<td>" + square + " km2</td>" + "<td>" + curr + "</td>" + "<td>" + gov + "</td>" + "<td>" + telcode + "</td></tr>";
+		}
+		function showCities(sel_country) {
+			if (sel_country != "") {
+				var table = { html: "<table id='citiesTable' border='1' width = '450' align = 'left'>" };
+				table.html += "<tr><td><font face = 'cursive'>city</font></td><td><font face = 'cursive'>population</font></td></tr>";
+				for (property in cities) {
+					if (cities[property].country == countries[sel_country].name) {
+						addCityToTable(cities[property].name, cities[property].population, table);
+					}
+				}
+				table.html += "</table>";
+				document.getElementById("cities").innerHTML = table.html;
+			}
+			else {
+				document.getElementById("cities").innerHTML = "";
+			}
+		}
+		function addCityToTable(city, population, table) {
+			table.html += "<tr><td>" + city + "</td><td>" + population + "</td></tr>";
+		}
+		function addCurrToTable(curr, fullcurr, symb, actcurr, table) {
+			table.html += "<tr><td>" + curr + "</td><td>" + fullcurr + "</td><td>" + symb + "</td><td>" + actcurr + "</td></tr>";
+		}
+		function showCurrencies(sel_country) {
+			if (sel_country != "") {
+				var table = { html: "<table id='currenciesTable' border='1' width = '550' align = 'right'>" };
+				var currencies = getCurrencies();
+				table.html += "<tr><td><font face = 'cursive'>currency</font></td><td><font face = 'cursive'>full name</font></td><td><font face = 'cursive'>symbol</font></td><td><font face = 'cursive'>actual exchange to grn</font></td></tr>";
+				for (property in currencies) {
+					if (property == countries[sel_country].curr) {
+						addCurrToTable(property, currencies[property].name, currencies[property].symb, currencies[property].togrn, table);
+					}
+				}
+				table.html += "</table>";
+				document.getElementById("currencies").innerHTML = table.html;
+			}
+			else {
+				document.getElementById("currencies").innerHTML = "";
+			}
+		}
+		function showAddBattons(sel_country) {
+			if (sel_country != "") {
+				var battons = "";
+				var i = 1;
+				var x = 5;
+				for (property in cities) {
+					if (cities[property].country == countries[sel_country].name) {
+						battons += '<input style="margin-top:' + x + 'px" type="button" id="AddTr' + property + '" value="Add" onclick = "addtravel(' + i + ')" /><br />';
+					}
+					i++;
+				}
+				document.getElementById("addtravelbatts").style.margin = '25px';
+				document.getElementById("addtravelbatts").innerHTML = battons;
+			}
+			else {
+				document.getElementById("addtravelbatts").innerHTML = "";
+			}
+		}
+		function addtravel(id) {
+			var city;
+			var i = 1;
+			for (property in cities) {
+				if (i == id) {
+					city = cities[property].name;
+				}
+				i++;
+			}
+			travels.push({ city, dep_date: "", arriv_date: "" });
+			showTravels(travels);
+			showBattons(travels);
+			changeTravel(travels.length - 1);
+		}
+
+		$(document).ready(function () {
+			$("#dropDownMenu").change(function () {
+				showCountries($("#dropDownMenu").find(":selected").attr("value"));
+			});
+		});
+
+		</script>
+	</div>
+	<text style="position: absolute; overflow:auto ; top: 1500px">Copyright by Tair Abduraimov</text>
+
+</body>
+</html>
